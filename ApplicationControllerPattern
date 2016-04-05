@@ -15,7 +15,7 @@ public class ApplicationControllerPattern {
 		HashMapOfCommands.put("/", new Divide());
 		HashMapOfCommands.put("-", new Subtract());
 		
-		HandleMath handler = HashMapOfCommands.get(command);
+		MathWizard handler = HashMapOfCommands.get(command);
 		
 		handler.execute(num1, num2);
 		
