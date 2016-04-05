@@ -1,6 +1,6 @@
 package snippet;
 
-public class Add implements HandleMath {
+public class Add implements MathWizard {
 	
 	public void execute(Integer num1, Integer num2) {
 		Integer sum = num1 + num2;
