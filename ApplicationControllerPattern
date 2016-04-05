@@ -1,0 +1,24 @@
+package snippet;
+import java.util.HashMap;
+
+public class ApplicationControllerPattern {
+	public static HashMap<String,HandleMath> HashMapOfCommands = new HashMap <String,HandleMath>();
+	
+	public ApplicationControllerPattern(){
+		
+	}
+	
+	public static void handleCommand(String command, Integer num1, Integer num2){
+		
+		HashMapOfCommands.put("+", new Add());
+		HashMapOfCommands.put("*", new Multiply());
+		HashMapOfCommands.put("/", new Divide());
+		HashMapOfCommands.put("-", new Subtract());
+		
+		HandleMath handler = HashMapOfCommands.get(command);
+		
+		handler.execute(num1, num2);
+		
+	}
+	
+}
